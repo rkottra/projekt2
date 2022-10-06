@@ -1,0 +1,31 @@
+<header>
+    <h1>Isten hozta a weblapunkon {{nev+1}}!</h1>
+</header>
+
+<input value="{{nev}}" name="sadsd" /><br>
+<input [value]="nev" name="sadsd" /><br>
+
+
+<!--<button click="kattintas()">Kattints!</button>-->
+<button (click)="kattintas()">Kattints!</button>
+
+<table border="1">
+    <tr>
+        <td [attr.rowspan]="sorok">Lorem, ipsum dolor sit amet </td>
+        <td>Lorem, ipsum dolor sit amet </td>
+        <td>Lorem, ipsum dolor sit amet </td>
+    </tr>
+    <tr>
+        <td>Lorem, ipsum dolor sit amet </td>
+        <td attr.rowspan="{{sorok}}">Lorem, ipsum dolor sit amet </td>
+    </tr>
+    <tr>
+        <td>Lorem, ipsum dolor sit amet </td>
+        <td>Lorem, ipsum dolor sit amet </td>
+    </tr>
+    <tr>
+        <td>Lorem, ipsum dolor sit amet </td>
+        <td>Lorem, ipsum dolor sit amet </td>
+        <td>Lorem, ipsum dolor sit amet </td>
+    </tr>
+</table>
