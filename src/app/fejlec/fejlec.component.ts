@@ -6,8 +6,10 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fejlec.component.css']
 })
 export class FejlecComponent implements OnInit {
+  
   public nev:string = "Kovács János";
   public sorok:Number = 3;
+  public error:string = "";
 
   constructor() { }
 
@@ -16,10 +18,13 @@ export class FejlecComponent implements OnInit {
   }
   
   kattintas() {
-    console.log("sárga");  
-    this.nev = "Sárga";
-    this.sorok = 2;
-    //document.getElementsByTagName("body")[0].style.backgroundColor = "yellow";
+    this.error = "";
+    if (this.nev.split(' ').length < 2) {
+      this.error = "Túl kevés tagja van a névnek.";
+    } 
+    if (this.nev.length < 4) {
+      this.error = "Túl kevés karakter.";
+    }
   }
 
 }
